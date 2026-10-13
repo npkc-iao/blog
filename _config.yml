@@ -15,3 +15,5 @@ exclude:
   - README.md
   - КАК_ПУБЛИКОВАТЬ.md
   - tools/
+minima:
+  date_format: "%d.%m.%Y"
