@@ -1,0 +1,18 @@
+# Каждый push и Pull Request проверяется на утечки внутренней информации до публикации.
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  leaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Нет внутренних адресов, витрин, токенов и персональных данных
+        run: python tools/check_leaks.py

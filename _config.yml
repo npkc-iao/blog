@@ -1,0 +1,17 @@
+# Настройки сайта для GitHub Pages (Jekyll собирается на стороне GitHub автоматически)
+title: Аналитика в медицине
+description: Заметки о данных, ClickHouse, BI и локальных языковых моделях в радиологии
+author: Михаил Филин
+lang: ru
+theme: minima
+baseurl: "/blog"
+url: "https://npkc-iao.github.io"
+permalink: /:year/:month/:title/
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - КАК_ПУБЛИКОВАТЬ.md
+  - tools/
